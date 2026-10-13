@@ -1,0 +1,56 @@
+{
+  "photo": "img2",
+  "sampled_tile_indices": [
+    32,
+    23,
+    46,
+    19,
+    39,
+    53,
+    37,
+    51,
+    48,
+    25,
+    22,
+    60
+  ],
+  "total_tiles": 64,
+  "actual_extracted_annotation_centers": 350,
+  "proxy_sample_counts": [
+    4,
+    3,
+    9,
+    8,
+    4,
+    6,
+    6,
+    0,
+    2,
+    9,
+    7,
+    6
+  ],
+  "direct_95pct_interval_FOR_ANNOTATIONS_ONLY": {
+    "method": "random-sampling expansion",
+    "sampled_tiles": 12,
+    "total_tiles": 64,
+    "estimate": 341.33,
+    "standard_error": 46.74,
+    "confidence": 0.95,
+    "lower": 238.45,
+    "upper": 444.22,
+    "caveat": "Approximate design-based interval assuming randomly sampled tiles and accurate human counts; not a neural-network confidence score."
+  },
+  "cnn_assisted_95pct_interval_FOR_ANNOTATIONS_ONLY": {
+    "method": "model-assisted difference",
+    "sampled_tiles": 12,
+    "total_tiles": 64,
+    "estimate": 272.0,
+    "standard_error": 80.65,
+    "confidence": 0.95,
+    "lower": 94.49,
+    "upper": 449.51,
+    "caveat": "Approximate design-based interval assuming randomly sampled tiles and accurate human counts; not a neural-network confidence score."
+  },
+  "warning": "These are sampling intervals for imperfect MASK ANNOTATIONS, not the real barnacle count. Manually verify sampled images for a scientifically meaningful interval."
+}
