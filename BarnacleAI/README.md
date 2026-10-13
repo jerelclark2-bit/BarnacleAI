@@ -56,9 +56,7 @@ uvicorn api:app --reload
 
 For `unseen_img1`, select its central-square crop if using the DALI framed image. For other image sources, crop manually first or specify `none`. Do **not** score unlabeled images as if they had known targets.
 
-## COSC 3: feature engineering in practice
 
-The lecture's 8 × 8 handwritten-digit example generalizes to each image tile.
 
 Let `w_ab` be grayscale brightness normalized to [0,1]. We calculate:
 
@@ -81,14 +79,6 @@ See [RESULTS.md](RESULTS.md) for the measured output of the included pilot train
 - **Regression target.** This model estimates annotations per 128 × 128 patch. It only reports sums over *complete evaluated tiles*, while the CNN predicts centers over the entire central crop.
 - **Uncertainty.** Disagreement is a practical review flag. A genuine 95% count prediction interval would require additional, diverse *independent labeled photos* and appropriate calibration.
 - **Manual scientist corrections.** Feedback is stored to permit future analysis, not instantly incorporated into an online model.
-
-## What to show in a DALI interview
-
-1. Open the held-out overlay and ask: Which barnacles were missed? Which are false positives?
-2. Compare CNN and Ridge MAE against the provided proxy annotations. Describe domain shift.
-3. Demonstrate the 3D chart and explain that it plots disagreement, not empirical 95% certainty.
-4. Explain the tradeoff: a reliable, inspectable human-in-the-loop prototype is more valuable than a false claim of solved automation.
-5. Be transparent about using AI assistance for implementation. Be able to personally explain every method you present.
 
 ## Next experiments
 
